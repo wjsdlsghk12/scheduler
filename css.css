@@ -175,4 +175,26 @@ body {
 .hidden{
     display: none;
 }
+.menu__list{
+    display: grid;
+    height: 85.4vh; 
+    font-size: 2rem;     
+    text-align: center;
+}
 
+.menu__list .menu_close{  
+    justify-content: center;    
+    color: black;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;     
+    text-align: center;
+    border: 3px solid;
+    border-color: black;
+    margin-left: 45%;
+}
+/* .menu__list div{    
+    border-color: black;
+    border-top: 3px solid;
+} */

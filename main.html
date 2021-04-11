@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,height=device-height">
     <title>스케쥴표</title>
-    <link rel="stylesheet" href="css.css">
+    <!-- <link rel="stylesheet" href="css.css"> -->
 </head>
 
 <body>
@@ -27,9 +27,9 @@
             <div class="mid-top">
                 <div id="mid-top-left"></div>
                 <div id="month-left">◀</div>
-                <div id="mid-top-center"></div>
+                <div id="month"></div>
                 <div id="month-right">▶</div>
-                <div id="mid-top-right">오늘</div>
+                <div id="today">오늘</div>
             </div>
 
             <div class="mid-bottom"></div>
@@ -39,7 +39,15 @@
     <section class="modal hidden">
         <div class="lmodal hidden">
             <div class="lmodal__overayout"></div>
-            <div class="lmodal__overay"></div>            
+            <div class="lmodal__overay">
+                <div class="menu__list">
+                    <span class="menu_close">X</span>
+                    <div class="menu_year">년</div>
+                    <div class="menu_month">월</div>
+                    <div class="menu_week">주</div>
+                    <div class="menu_day">일</div>                    
+                </div>
+            </div>            
         </div>
     
         <div class="cmodal hidden">
@@ -48,9 +56,14 @@
         </div>
     </section>
 
-
-    <script src="script.js"></script>
+    
     <link rel="stylesheet" href="css.css">
+    <script src="script.js"></script>
+    <script src="./botton/monleft.js"></script>
+    <script src="./botton/monright.js"></script>
+    <script src="./botton/today.js"></script>
+    <script src="./botton/menu.js"></script>
+    <script src="./botton/dayclick.js"></script>    
 </body>
 
 </html>
