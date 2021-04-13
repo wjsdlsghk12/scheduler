@@ -1,3 +1,4 @@
+
 var date = new Date();//현재 날짜
 var dayName = ["일", "월", "화", "수", "목", "금", "토"];//요일배열
 var calendar = document.querySelector('.mid-bottom');//달력 클래스 지정
@@ -60,4 +61,3 @@ for (i = 0; i < 49; i++) {//현재시점 달력 숫자 구현
 }
 
 document.querySelector(`.day${date.getDate()+startNum + 6}`).classList.add("target");//홈페이지 진입시 오늘 설정
-
