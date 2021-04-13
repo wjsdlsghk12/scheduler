@@ -1,0 +1,22 @@
+{
+  "name": "scheduler",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjsdlsghk12/scheduler.git"
+  },
+  "author": "mokgandy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjsdlsghk12/scheduler/issues"
+  },
+  "homepage": "https://github.com/wjsdlsghk12/scheduler#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

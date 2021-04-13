@@ -13,8 +13,8 @@ document.querySelectorAll('.mid-bottom div').forEach(a =>    //날짜 클릭시 
 
             document.querySelectorAll('.mid-bottom div').forEach(a => { a.classList.remove("target") });
             event.currentTarget.classList.add("target");
-            // document.querySelector('.modal').classList.remove('hidden');
-            // document.querySelector('.cmodal').classList.remove('hidden');            
+            document.querySelector('.modal').classList.remove('hidden');
+            document.querySelector('.cmodal').classList.remove('hidden');            
             document.querySelectorAll('#plus').forEach(a => { a.remove() });
             event.currentTarget.insertAdjacentHTML('beforeend', '<span id="plus">88</span>');
         }

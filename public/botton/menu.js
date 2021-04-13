@@ -14,4 +14,3 @@ document.querySelector('.menu_close').addEventListener('click', event => {//ë©”ë
     document.querySelector('.modal').classList.add('hidden');
 }
 )
-
