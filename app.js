@@ -1,28 +1,31 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+var index = require('./route/index.js')
 app.use(express.static(__dirname + '/public'));
 
 
-app.get('/',function(req,res){  
-  fs.readFile('./public/index.html', (err, data) => {
-  res.statusCode = 200
-  res.end(data)
-  });
-});
+app.use('/',index);
+
 
 app.get('/scheduler',function(req,res) {
   fs.readFile('./public/main.html', (err, data) => {
     res.statusCode = 200
-    res.end(data)
+    res.send(data)
   });
 });
 
 
-app.get('/scheduler/menu',function(req,res) {
+app.get('/scheduler/:id',function(req,res) {
+  var topic=['javar is','javar1 is','javar3 is']
+  var output=`
+  <a href="/scheduler?id=0">javar</a>  
+  <a href="/scheduler?id=1">javar1</a>
+  <a href="/scheduler?id=2">javar2</a>
+  <h1>${topic[req.params.id]}</h1>
+  `  
 
- res.status = 200;
- res.end(a);
+ res.send(output);
 });
 
 
