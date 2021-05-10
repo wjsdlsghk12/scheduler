@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    background-color: 
+    rgba(144, 238, 144,0.3); 
+    
+    
+}
+
+.top {
+    background-color: 
+    white;
+    height: 7vh;    
+    border-bottom:1px solid gray;
+    width: 100vw;    
+        
+}
+.top-w{
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    background-color: 
+    rgba(255, 192, 203,0.3);
+}
+
+.top-p{
+    height: 7vh; 
+    display: grid;
+    grid-template-columns: 15% 70% 1fr;
+    width: 100%;
+    max-width: 50rem;
+    align-content: center;
+    text-align: center;      
+}
+.top-p div{
+    font-weight: 600;
+}
+.mid{
+    height: 79.4vh;
+    display: flex;
+    justify-content: center;    
+    
+}
+.mid-s {    
+    height: 75vh;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 50rem;    
+    
+}
+
+.mid-top {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 20px 20px 20px 1fr;    
+    height: 6vh;
+    align-content: center;
+    font-weight: 600;    
+}
+
+.mid-bottom{
+    background-color: white;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repat(5, 1fr);
+    border: 1px solid 
+    rgba(128,128,128,0.2);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.mid-bottom .day6,.day13,.day20,.day27,.day34,.day41,.day48{
+    color: blue;
+}
+.mid-bottom .day0,.day7,.day14,.day21,.day28,.day35,.day42,.day49{
+    color: red;
+}
+.mid-bottom div{    
+   font-weight: bold;   
+   display: flex;
+   justify-content: center;
+}
+
+#plus{
+    position: absolute;            
+    width: 1.313rem;
+    height: 1.313rem;    
+    background-color: red;
+    color: white;
+    border-radius: 100%;
+    font-size: 1rem;
+    margin: 2.4rem 0;
+}
+
+
+.mid-bottom .target{
+    background-color:
+    rgba(40, 231, 255,0.3);
+}
+
+.amonth{
+    opacity: 0.3;
+}
+
+.bmonth{
+    opacity: 0.3;
+}
+
+
+.modal{    
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;    
+    justify-content: center;
+}
+
+.lmodal{
+    width: 100%;
+    height: 100%;
+    max-width: 50rem;    
+}
+
+
+.lmodal__overay{
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    max-width: 40rem;
+    height: 100%;    
+    border-radius: 0px 20px 20px 0px;
+    transition: .35s ease;
+}
+
+.lmodal__overayout{    
+    position: fixed;
+    top:0;
+    left:0;
+    background-color:rgb(0, 0, 0,0.3);    
+    width: 100%;
+    height: 100%;    
+}
+
+.cmodal{    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;    
+    max-width: 50rem;    
+}
+
+.cmodal__overayout{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:rgb(0, 0, 0,0.3);    
+    width: 100%;
+    height: 100%;       
+}
+
+.cmodal__overay{
+    position: absolute;
+    background-color: white;
+    top:4vh;
+
+    width: 90vw;
+    max-width: 60rem;    
+    height: 82.4vh;    
+    border-radius: 20px;    
+}
+
+.hidden{
+    display: none;
+}
+.menu__list{
+    display: grid;
+    height: 85.4vh; 
+    font-size: 2rem;     
+    text-align: center;
+}
+
+.menu__list .menu_close{  
+    justify-content: center;    
+    color: black;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;     
+    text-align: center;
+    border: 3px solid;
+    border-color: black;
+    margin-left: 45%;
+}
+/* .menu__list div{    
+    border-color: black;
+    border-top: 3px solid;
+} */

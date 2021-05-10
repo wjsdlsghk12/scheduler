@@ -29,40 +29,4 @@ app.get('/scheduler/:id',function(req,res) {
 });
 
 
-
-
-
 app.listen(3000,() => console.log('example app listening on port 3000!'));
-
-
-
-
-
-
-
-
-// var http = require('http');
-// var fs = require('fs');
-// var url = require('url');
-
-
-
-
-// var app = http.createServer(function (req, res) {
-//   var _url = req.url;
-
-//   if (pathname === '/') {
-
-  
-//   // if (pathname == '/scheduler/menu') {
-//   //   fs.readFile('./public/botton/menu2.js', (err, data) => {
-//   //     res.statusCode = 200
-//   //     res.setHeader('Content-Type',"text/javascript");
-//   //     res.end(data)
-//   //   });
-//   // }
-
-
-
-// });
-// app.listen(3000);
