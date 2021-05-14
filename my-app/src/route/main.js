@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './css/main.css';
 // import variable from './variable';
 import Sss from './script';
@@ -71,8 +72,8 @@ class Main extends React.Component{
                     <div className="cmodal__overayout"></div>
                     <div className="cmodal__overay"></div>
                 </div>
-            </section>                            
-            
+            </section>                    
+    
         </div>
         
     );

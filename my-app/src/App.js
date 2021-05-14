@@ -14,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Route path="/" exact={true} component={Index}/>
       <Route path="/main" component={Main}/>
+      <Route path="/main/menu" component={Main}/>
     </BrowserRouter>
   );
 }

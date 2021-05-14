@@ -1,5 +1,7 @@
+import React from "react";
+import { Link } from "react-router-dom";
 
-function dayclick() {
+function dayclick() {    
     var midtl = document.querySelector('#mid-top-left');//달력 현재 년월
     var month = document.querySelector('#month');//달력 현재 월
     
