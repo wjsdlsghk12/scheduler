@@ -1,5 +1,6 @@
 import React from "react";
 import './css/main.css';
+// import variable from './variable';
 import Sss from './script';
 import dayclick from './botton/dayclick';
 import menu from './botton/menu';
@@ -14,6 +15,7 @@ import today from './botton/today';
 
 
 class Main extends React.Component{    
+    
     componentDidMount(){
         Sss();
         dayclick();
@@ -23,7 +25,7 @@ class Main extends React.Component{
         today();
     }
 
-    render(){
+    render(){        
     return (
         <div>
             <header className="top">
