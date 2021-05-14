@@ -16,7 +16,7 @@ import today from './botton/today';
 
 class Main extends React.Component{    
     
-    componentDidMount(){
+    componentDidMount(){        
         Sss();
         dayclick();
         menu();
@@ -71,10 +71,8 @@ class Main extends React.Component{
                     <div className="cmodal__overayout"></div>
                     <div className="cmodal__overay"></div>
                 </div>
-            </section>    
-            <script>
-
-            </script>
+            </section>                            
+            
         </div>
         
     );
