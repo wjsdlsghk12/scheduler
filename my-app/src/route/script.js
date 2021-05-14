@@ -52,7 +52,7 @@ function Sss() {
 
             var amonth = document.querySelector(`.day${i + 7}`);
             amonth.insertAdjacentHTML('beforeend',
-                `${new Date(`${date.getFullYear()}`, `${date.getMonth()}`, i).getDate()}`
+                `${new Date(`${date.getFullYear()}`, `${date.getMonth()}`, i - startNum + 1).getDate()}`                
             )
             amonth.classList.add('amonth');
         }

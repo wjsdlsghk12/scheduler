@@ -1,21 +1,29 @@
+import React from "react";
+import { Link } from "react-router-dom";
 
-function menu(){
-document.querySelector('#menu').addEventListener('click', event => {//메뉴선택시 모달 등장    
-    document.querySelector('.lmodal').classList.remove('hidden');
-    document.querySelector('.modal').classList.remove('hidden');               
-}
-)
-document.querySelector('.lmodal__overayout').addEventListener('click', event => {//메뉴 모달 삭제
-    document.querySelector('.lmodal').classList.add('hidden');
-    document.querySelector('.modal').classList.add('hidden');
-}
-)
 
-document.querySelector('.menu_close').addEventListener('click', event => {//메뉴 모달 삭제
-    document.querySelector('.lmodal').classList.add('hidden');
-    document.querySelector('.modal').classList.add('hidden');
-}
-)
+class Menu extends React.Component {
+
+    render() {
+        return (
+            <div className="modal">
+                <div className="lmodal">
+                    <div className="lmodal__overayout"></div>
+                    <div className="lmodal__overay">
+                        <div className="menu__list">
+                            <span className="menu_close">
+                                <Link to="/main">X</Link>
+                            </span>
+                            <div className="menu_year">년</div>
+                            <div className="menu_month">월</div>
+                            <div className="menu_week">주</div>
+                            <div className="menu_day">일</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
-export default menu;
+export default Menu;

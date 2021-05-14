@@ -4,10 +4,10 @@ import './css/main.css';
 // import variable from './variable';
 import Sss from './script';
 import dayclick from './botton/dayclick';
-import menu from './botton/menu';
 import monleft from './botton/monleft';
 import monright from './botton/monright';
 import today from './botton/today';
+
 // import { BrowserRouter } from "react-router-dom";
 // import './public/script';
 // import ScriptTag from 'react-script-tag';
@@ -19,12 +19,15 @@ class Main extends React.Component{
     
     componentDidMount(){        
         Sss();
-        dayclick();
-        menu();
+        dayclick();                
         monleft();
         monright();
         today();
     }
+    componentDidUpdate(){
+        
+    }
+
 
     render(){        
     return (
@@ -32,7 +35,7 @@ class Main extends React.Component{
             <header className="top">
                 <section className="top-w">
                     <div className="top-p">
-                        <div id="menu">메뉴</div>
+                        <div id="menu"><Link to="/main/menu">메뉴</Link></div>
                         <div id="home">공유 스케쥴 달력</div>
                         <div id="search">검색</div>
                     </div>
@@ -56,10 +59,10 @@ class Main extends React.Component{
             </section>
             <section className="modal hidden">
                 <div className="lmodal hidden">
-                    <div className="lmodal__overayout"></div>
+                    <div className="lmodal__overayout"><Link to="/main"></Link></div>
                     <div className="lmodal__overay">
                         <div className="menu__list">
-                            <span className="menu_close">X</span>
+                            <span className="menu_close"><Link to="/main">X</Link></span>
                             <div className="menu_year">년</div>
                             <div className="menu_month">월</div>
                             <div className="menu_week">주</div>
