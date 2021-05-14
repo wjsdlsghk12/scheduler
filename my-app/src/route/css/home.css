@@ -1,0 +1,18 @@
+/* body{
+    background-color: rgb(230, 230, 230);
+} */
+h1 {
+    position: fixed;
+    left:25%;
+    top: 30%;
+    right:25%;
+    color: pink;
+}
+div {
+    position: fixed;
+    left: 25%;
+    top:40%;
+}
+.login{
+    border-style:none;
+}
