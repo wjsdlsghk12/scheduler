@@ -1,22 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
 
 function dayclick() {    
     var midtl = document.querySelector('#mid-top-left');//달력 현재 년월
     var month = document.querySelector('#month');//달력 현재 월
     
-    document.querySelectorAll('.mid-bottom div').forEach(a =>    //날짜 클릭시 해당 날짜 색인 및 메모 리스트    
+    document.querySelectorAll('.mid-bottom a').forEach(a =>    //날짜 클릭시 해당 날짜 색인 및 메모 리스트    
         a.addEventListener('click', event => {
 
             var classNum = [];
-            document.querySelectorAll('.mid-bottom div').forEach(b => classNum.push(b.className));
+            document.querySelectorAll('.mid-bottom a').forEach(b => classNum.push(b.className));
 
             if (classNum.indexOf(event.currentTarget.className) < 7) { }
             else if (classNum.indexOf(event.currentTarget.className) < new Date(`${midtl.className}`, `${month.innerHTML - 1}`, 1).getDay() + 7) { }
             else if (classNum.indexOf(event.currentTarget.className) <
                 new Date(`${midtl.className}`, `${month.innerHTML - 1}`, 1).getDay() + new Date(`${midtl.className}`, `${month.innerHTML}`, 0).getDate() + 7) {
 
-                document.querySelectorAll('.mid-bottom div').forEach(a => { a.classList.remove("target") });
+                document.querySelectorAll('.mid-bottom a').forEach(a => { a.classList.remove("target") });
                 event.currentTarget.classList.add("target");
                 document.querySelector('.modal').classList.remove('hidden');
                 document.querySelector('.cmodal').classList.remove('hidden');

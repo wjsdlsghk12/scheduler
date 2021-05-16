@@ -1,85 +1,99 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './css/main.css';
-// import variable from './variable';
-import Sss from './script';
-import dayclick from './botton/dayclick';
-import monleft from './botton/monleft';
-import monright from './botton/monright';
-import today from './botton/today';
-
-// import { BrowserRouter } from "react-router-dom";
-// import './public/script';
-// import ScriptTag from 'react-script-tag';
- 
+import Structure from './component/structure';
+import dayclick from './component/dayclick';
+import today from './component/today';
+import Dayclick2 from './component/dayclick2';
 
 
+var date = new Date();
 
-class Main extends React.Component{    
-    
-    componentDidMount(){        
-        Sss();
-        dayclick();                
-        monleft();
-        monright();
+class Main extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            year: date.getFullYear(),
+            month: date.getMonth()
+        }
+    }
+
+    datechangeleft = () => {
+        if (this.state.month === 0) {//왼쪽 클릭시 1월일경우 년도/월 변경
+            this.setState({
+                year: this.state.year - 1,
+                month: 11
+            })
+        }
+        else {//현재월의 왼쪽 클릭시 년도 변경 외에 월변경
+            this.setState({                
+                month: this.state.month - 1
+            })
+        }
+        document.querySelectorAll('.mid-bottom a').forEach(a => { a.classList.remove("target") });
+    }
+
+    datechangeright = () => {
+        if (this.state.month === 11) {//오른쪽 클릭시 12월일경우 년도 변경
+            this.setState({
+                year: this.state.year + 1,
+                month: 0
+            })
+        }
+        else {//현재월의 오른쪽 클릭시 이벤트(년도 변경 외에)
+            this.setState({                
+                month: this.state.month + 1
+            })
+        }
+    }
+
+    componentDidMount() {        
+        // dayclick();        
         today();
     }
-    componentDidUpdate(){
-        
+    componentDidUpdate() {
     }
 
+    render() {
+        return (
+            <div>
+                <header className="top">
+                    <section className="top-w">
+                        <div className="top-p">
+                            <Link id="menu" to="/main/menu">메뉴</Link>
+                            <div id="home">공유 스케쥴 달력</div>
+                            <div id="search">검색</div>
+                        </div>
+                    </section>
+                </header>
 
-    render(){        
-    return (
-        <div>
-            <header className="top">
-                <section className="top-w">
-                    <div className="top-p">
-                        <div id="menu"><Link to="/main/menu">메뉴</Link></div>
-                        <div id="home">공유 스케쥴 달력</div>
-                        <div id="search">검색</div>
+                <section className="mid">
+                    <div className="mid-s">
+
+                        <Structure 
+                        datechangeleft={this.datechangeleft}
+                        datechangeright={this.datechangeright}
+                        year={this.state.year}
+                            month={this.state.month}
+                         />
+
+                        <Dayclick2
+                            year={this.state.year}
+                            month={this.state.month}
+                        />
+
                     </div>
                 </section>
-            </header>
-
-            <section className="mid">
-                <div className="mid-s">
-
-                    <div className="mid-top">
-                        <div id="mid-top-left"></div>
-                        <div id="month-left">◀</div>
-                        <div id="month"></div>
-                        <div id="month-right">▶</div>
-                        <div id="today">오늘</div>
+                <section className="modal hidden">
+                    <div className="cmodal hidden">
+                        <div className="cmodal__overayout"></div>
+                        <div className="cmodal__overay"></div>
                     </div>
+                </section>
 
-                    <div className="mid-bottom"></div>
+            </div>
 
-                </div>
-            </section>
-            <section className="modal hidden">
-                <div className="lmodal hidden">
-                    <div className="lmodal__overayout"><Link to="/main"></Link></div>
-                    <div className="lmodal__overay">
-                        <div className="menu__list">
-                            <span className="menu_close"><Link to="/main">X</Link></span>
-                            <div className="menu_year">년</div>
-                            <div className="menu_month">월</div>
-                            <div className="menu_week">주</div>
-                            <div className="menu_day">일</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="cmodal hidden">
-                    <div className="cmodal__overayout"></div>
-                    <div className="cmodal__overay"></div>
-                </div>
-            </section>                    
-    
-        </div>
-        
-    );
+        );
     }
 }
 

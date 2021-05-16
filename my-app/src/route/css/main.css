@@ -1,8 +1,6 @@
-a {
+a:link {
     text-decoration: none;    
-}
-a:visited{
-    color: black;
+    color: 0;
 }
 
 body {
@@ -39,6 +37,9 @@ body {
     text-align: center;      
 }
 .top-p div{
+    font-weight: 600;
+}
+.top-p a{
     font-weight: 600;
 }
 .mid{
@@ -83,11 +84,17 @@ body {
 .mid-bottom .day0,.day7,.day14,.day21,.day28,.day35,.day42,.day49{
     color: red;
 }
+
 .mid-bottom div{    
    font-weight: bold;   
    display: flex;
    justify-content: center;
 }
+.mid-bottom a{    
+    font-weight: bold;   
+    display: flex;
+    justify-content: center;
+ }
 
 #plus{
     position: absolute;            
@@ -196,7 +203,19 @@ body {
     text-align: center;
 }
 
-.menu__list .menu_close{  
+.menu_close{  
+    justify-content: center;    
+    color: black;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;     
+    text-align: center;
+    border: 3px solid;
+    border-color: black;
+    margin-left: 45%;
+}
+.menu_close2{  
     justify-content: center;    
     color: black;
     border-radius: 50%;

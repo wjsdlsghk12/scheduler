@@ -1,9 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import './css/home.css';
-// import styled from "styled-components";
-// import './public/script';
-
 
 class Index extends React.Component{
 
