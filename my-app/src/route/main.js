@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './css/main.css';
+import css from './css/main.css';
 import Structure from './component/structure';
 import dayclick from './component/dayclick';
 import today from './component/today';
